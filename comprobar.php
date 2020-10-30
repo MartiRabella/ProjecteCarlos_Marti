@@ -48,10 +48,18 @@
       <h1>Tus Datos</h1>
 
       <?php
+
+        print_r($_COOKIE['lista']);
+
+        $hora = time();
+
         echo "Nombre: "; echo $_POST['nombre']; echo "<br/>";
         echo "Apellidos: "; echo $_POST['apellidos']; echo "<br/>";
         echo "Telefono: "; echo $_POST['telefono']; echo "<br/>";
         echo "E-mail: "; echo $_POST['email']; echo "<br/>";
+
+        //file_put_contents("pedido.txt",$cookie,FILE_APPEND | LOCK_EX);
+
       ?>
     </div>
     <div class="lead">

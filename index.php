@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 if(isset($_COOKIE['contador']))
  {
@@ -7,6 +8,8 @@ if(isset($_COOKIE['contador']))
  }
 
  ?>
+=======
+>>>>>>> 473c51105865b438fb4c0f1b1c97ae8f855616ee
 <!doctype html>
 <html lang="es">
   <head>
