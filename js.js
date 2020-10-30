@@ -1,16 +1,22 @@
-
+//	Hacer tienda online de informatica usando: HTML, CSS, JS
+//	En el codigo javascript hay que hacer la base de datos de los productos con un vector por ejemplo...
+ 
+ 
+ 
+ 
 //BASE DE DATOS
 var productos = ["Antivirus", "Grafica", "Disco duro", "Ordenador", "Bolso portatil", "Portatil", "Memoria RAM", "Router Linux", "Sintonizadora TV"];
 var imgGrandes = ["img/productos/1.jpg", "img/productos/2.jpg", "img/productos/3.jpg", "img/productos/4.jpg", "img/productos/5.jpg", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
 var imgPeque = ["img/productos/1m.jpg", "img/productos/2m.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
 var precios = [33, 169, 36, 360, 11, 540, 21, 66, 25];
+var stock = [5, 2, 8, 3, 10, 4, 3, 1, 2];
 var precioTransporte = [6, 12, 20, "gratis"];
 var IVA = 0.18;
 var uniUser;
 
 
 
-//JAVASCRIPT A EJECUTARSE UNA VEZ CARGADA LA PAGINA:
+//JAVASCRIPT A EJECUTARSE UNA VEZ CARGADA LA PAGINA: 
 window.onload = function(){
 
 
@@ -27,23 +33,9 @@ DIVS[i].innerHTML = '<a id="imgG'+i+'" href="' +imgGrandes[i]+ '"><img id="imgP'
 var fecha = new Date();
 var anio = fecha.getFullYear();
 
-for (var i=1;i<=31;i++){
-document.getElementById("fechaNacimientoDia").innerHTML = document.getElementById("fechaNacimientoDia").innerHTML + '<option value="' +i+ '">' +i+ '</option>';
-}
 
-for (var i=anio;i>=(anio-110);i--){
-document.getElementById("fechaNacimientoAnio").innerHTML = document.getElementById("fechaNacimientoAnio").innerHTML + '<option value="' +i+ '">' +i+ '</option>';
-}
 
 //Tarjeta de credito:
-for (var i=1;i<=12;i++){
-document.getElementById("mesTarjeta").innerHTML = document.getElementById("mesTarjeta").innerHTML + '<option value="' +i+ '">' +i+ '</option>';
-}
-
-for (var i=anio;i<=(anio+21);i++){
-document.getElementById("anioTarjeta").innerHTML = document.getElementById("anioTarjeta").innerHTML + '<option value="' +i+ '">' +i+ '</option>';
-}
-
 
 
 //Botones que llevaran a cabo la ejecucion de determinadas secuencias de codigo JavaScript:
@@ -57,6 +49,8 @@ document.getElementById("botonConfirmar").onclick = validaDatosPago;
 
 
 /*-------------------COMIENZAN LAS FUNCIONES-------------------*/
+
+
 
 
 //FUNCION DE VALIDACION DE UNIDADES:
@@ -79,12 +73,12 @@ document.getElementById("menu").className = "menuNo";
 document.getElementById("divZonaCompra").className = "divZonaCompraNo";
 document.getElementById("divTotal").className = "divsNo";
 /**/ document.getElementById("divDatos").className = "divsNo";
-/**/ document.getElementById("divPago").className = "divsNo";
+/**/ document.getElementById("divPago").className = "divsNo"; 
 
 //Deshabilita el boton de datos personales:
 document.getElementById("botonDatos").disabled = true;
 /**/ document.getElementById("botonDatos").disabled = true;
-/**/ document.getElementById("botonDatos").disabled = true;
+/**/ document.getElementById("botonDatos").disabled = true; 
 
 //Con solo un error se para la validacion de unidades:
 return;
@@ -129,6 +123,7 @@ if (uniUser[i].value != 0){
 numProductos++;
 }
 
+
 if (uniUser[i].value != 0){
 
 //Modifica el css para hacer hueco a los formularios
@@ -137,7 +132,6 @@ document.getElementById("menu").className = "menuSi";
 document.getElementById("divZonaCompra").className = "divZonaCompraSi";
 document.getElementById("divTotal").className = "divsSi";
 /**/ document.getElementById("divDatos").className = "divsNo";
-/**/ document.getElementById("divPago").className = "divsNo";
 
 //Habilita el boton de datos personales
 document.getElementById("botonDatos").disabled = false;
@@ -148,6 +142,7 @@ carroTotal = carroTotal + preTotal;
 document.getElementById("tablaTotal").innerHTML = tablaTotal + '<tr class="proCarrito"><td>' +productos[i]+ '</td><td>' +uniUser[i].value+ '</td><td>' +precios[i]+ '</td><td id="preTotal' +i+'" name="preTotal">' +preTotal+ '</td></tr>';
 }
 }
+
 
 //Se calcula el transporte a pagar segun la cantidad de productos comprados:
 var precioTransporteAPagar;
@@ -183,20 +178,23 @@ totalIVA=totalIVA/100;
 //Limitar a 2 los decimales a mostrar del TOTAL A PAGAR:
 totalAPagar=totalAPagar*100;
 totalAPagar=Math.floor(totalAPagar);
-totalAPagar=totalAPagar/100;
+totalAPagar=totalAPagar/100; 
 
 //Se añade a la tabla el TOTAL que suma el carrito:
 tablaTotal = document.getElementById("tablaTotal").innerHTML;
 document.getElementById("tablaTotal").innerHTML = tablaTotal + '<tr><td> </td> <td></td><td class="preUni"><b>Transporte: </b></td><td class="preTotal"><b>' +totalTransporte+ '</b></td></tr>' + '<tr><td> </td> <td></td><td class="preUni"><b>IVA ('+(IVA*100)+'%): </b></td><td class="preTotal"><b>' +totalIVA+ '</b></td></tr>' + '<tr><td> </td> <td></td><td class="preUni"><b>Total: </b></td><td class="preTotal" id="totalAPagar"><b>' +totalAPagar+ ' €</b></td></tr>';
-}
+} 
+
+
+
 
 //FUNCION DE PEDIR DATOS
 function pideDatos(elEvento) {
 document.getElementById("divDatos").className = "divsSi";
 /**/ document.getElementById("divTotal").className = "divsNo";
-/**/ document.getElementById("divPago").className = "divsNo";
+/**/ document.getElementById("divPago").className = "divsNo"; 
 document.getElementById("botonPago").disabled = false;
-}
+} 
 
 
 
@@ -215,7 +213,59 @@ document.getElementById("nombre").className = "textMal";
 }
 else{
 document.getElementById("nombre").className = "textBien";
+} 
+
+
+//DNI: 
+var vDNI = document.getElementById("dni").value;
+var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N',
+'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+
+if( !(/^\d{8}[A-Z]$/.test(vDNI)) ) {
+todoBien=false;
+document.getElementById("dni").className = "textMal";
 }
+else{
+document.getElementById("dni").className = "textBien";
+}
+
+if(vDNI.charAt(8) != letras[(vDNI.substring(0, 8))%23]) {
+todoBien=false;
+document.getElementById("dni").className = "textMal";
+} 
+else{
+document.getElementById("dni").className = "textBien";
+} 
+
+
+//Fecha de nacimiento DIA:
+var vFechaNacimientoDia = document.getElementById("fechaNacimientoDia").selectedIndex;
+if( vFechaNacimientoDia == null || vFechaNacimientoDia == 0 ) {
+todoBien=false;
+document.getElementById("fechaNacimientoDia").className = "textMal";
+}
+else{
+document.getElementById("fechaNacimientoDia").className = "textBien";
+}
+//Fecha de nacimiento MES:
+var vFechaNacimientoMes = document.getElementById("fechaNacimientoMes").selectedIndex;
+if( vFechaNacimientoMes == null || vFechaNacimientoMes == 0 ) {
+todoBien=false;
+document.getElementById("fechaNacimientoMes").className = "textMal";
+}
+else{
+document.getElementById("fechaNacimientoMes").className = "textBien";
+} 
+//Fecha de nacimiento AÑO:
+var vFechaNacimientoAnio = document.getElementById("fechaNacimientoAnio").selectedIndex;
+if( vFechaNacimientoAnio == null || vFechaNacimientoAnio == 0 ) {
+todoBien=false;
+document.getElementById("fechaNacimientoAnio").className = "textMal";
+}
+else{
+document.getElementById("fechaNacimientoAnio").className = "textBien";
+} 
+
 
 //Telefono:
 var vMovil = document.getElementById("movil").value;
@@ -225,7 +275,8 @@ document.getElementById("movil").className = "textMal";
 }
 else{
 document.getElementById("movil").className = "textBien";
-}
+} 
+
 
 //email:
 var vEmail1 = document.getElementById("email1").value;
@@ -256,6 +307,59 @@ document.getElementById("email2").className = "textMal";
 }
 
 
+//Nombre Via:
+var vViaNombre = document.getElementById("viaNombre").value;
+if( vViaNombre == null || vViaNombre.length == 0 || /^\s+$/.test(vViaNombre) || !isNaN(vViaNombre)) {
+todoBien=false;
+document.getElementById("viaNombre").className = "textMal";
+}
+else{
+document.getElementById("viaNombre").className = "textBien";
+} 
+
+
+//Via Numero: 
+var vViaNumero = document.getElementById("viaNumero").value;
+if( vViaNumero=="" || isNaN(vViaNumero) ) {
+todoBien=false;
+document.getElementById("viaNumero").className = "textMal";
+} 
+else{
+document.getElementById("viaNumero").className = "textBien";
+} 
+
+
+//Localidad:
+var vLocalidad = document.getElementById("localidad").value;
+if( vLocalidad == null || vLocalidad.length == 0 || /^\s+$/.test(vLocalidad) || !isNaN(vLocalidad)) {
+todoBien=false;
+document.getElementById("localidad").className = "textMal";
+}
+else{
+document.getElementById("localidad").className = "textBien";
+} 
+
+
+//Codigo Postal: 
+var vCodigoPostal = document.getElementById("codigoPostal").value;
+if( vCodigoPostal.length!=5 || vCodigoPostal=="" || isNaN(vCodigoPostal) ) {
+todoBien=false;
+document.getElementById("codigoPostal").className = "textMal";
+} 
+else{
+document.getElementById("codigoPostal").className = "textBien";
+} 
+
+
+//Provincia:
+var vProvincia = document.getElementById("provincia").selectedIndex;
+if( vProvincia == null || vProvincia == 0 ) {
+todoBien=false;
+document.getElementById("provincia").className = "textMal";
+}
+else{
+document.getElementById("provincia").className = "textBien";
+} 
 
 
 //Si no ha habido ni un solo error, se ejecuta la siguiente funcion que se encarga de mostrar el formulario de los datos personales:
@@ -276,6 +380,91 @@ function pideDatosPago(elEvento) {
 /**/ document.getElementById("divDatos").className = "divsNo";
 document.getElementById("divPago").className = "divsSi";
 document.getElementById("botonConfirmar").disabled = false;
+}
+
+
+
+
+//FUNCION DE VALIDACION DE DATOS PAGO:
+function validaDatosPago(elEvento) {
+
+var todoBien = true;
+
+//Titular de la cuenta:
+var vTitular = document.getElementById("titular").value;
+if( vTitular == null || vTitular.length == 0 || /^\s+$/.test(vTitular) || !isNaN(vTitular)) {
+todoBien=false;
+document.getElementById("titular").className = "textMal";
+}
+else{
+document.getElementById("titular").className = "textBien";
+} 
+
+
+//Tipo de tarjeta:
+var vTarjetas = document.getElementsByName("tarjetas");
+var seleccionado = false;
+for(var i=0; i<vTarjetas.length; i++) {
+if(vTarjetas[i].checked) {
+seleccionado = true;
+//break;
+}
+}
+if(!seleccionado) {
+todoBien=false;
+document.getElementById("alertTipoDeTarjeta").className = "alertTipoDeTarjeta";
+}
+else{
+document.getElementById("alertTipoDeTarjeta").className = "";
+} 
+
+
+//Numero de tarjeta: 
+var vNumeroTarjeta = document.getElementById("numeroTarjeta").value;
+if( vNumeroTarjeta.length!=16 || vNumeroTarjeta=="" || isNaN(vNumeroTarjeta) ) {
+todoBien=false;
+document.getElementById("numeroTarjeta").className = "textMal";
+} 
+else{
+document.getElementById("numeroTarjeta").className = "textBien";
+} 
+
+
+//CVC de la tarjeta: 
+var vCvcTarjeta = document.getElementById("cvcTarjeta").value;
+if( vCvcTarjeta.length!=3 || vCvcTarjeta=="" || isNaN(vCvcTarjeta) ) {
+todoBien=false;
+document.getElementById("cvcTarjeta").className = "textMal";
+} 
+else{
+document.getElementById("cvcTarjeta").className = "textBien";
+} 
+
+
+//Fecha de tarjeta MES:
+var vMesTarjeta = document.getElementById("mesTarjeta").selectedIndex;
+if( vMesTarjeta == null || vMesTarjeta == 0 ) {
+todoBien=false;
+document.getElementById("mesTarjeta").className = "textMal";
+}
+else{
+document.getElementById("mesTarjeta").className = "textBien";
+} 
+//Fecha de tarjeta AÑO:
+var vAnioTarjeta = document.getElementById("anioTarjeta").selectedIndex;
+if( vAnioTarjeta == null || vAnioTarjeta == 0 ) {
+todoBien=false;
+document.getElementById("anioTarjeta").className = "textMal";
+}
+else{
+document.getElementById("anioTarjeta").className = "textBien";
+} 
+
+
+//Si no ha habido ni un solo error, se ejecuta la siguiente funcion que se encarga de enviar los datos:
+if (todoBien){
+validaDatosPagoYEnviaCarro();
+}
 }
 
 
