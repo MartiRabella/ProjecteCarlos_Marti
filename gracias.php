@@ -1,3 +1,9 @@
+<?php
+
+  setcookie('hechopedido', "valorcookies",time() + 24*60*60);
+
+ ?>
+
 <!doctype html>
 <html lang="es">
   <head>
