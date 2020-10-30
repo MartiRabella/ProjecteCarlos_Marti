@@ -75,7 +75,7 @@ if (isset($_COOKIE['hechopedido'])) {
 				<div id="divbotones">
 					<input type="button" id="botonTotal" value="Calcular total"/>
 					<input type="button" id="botonDatos" value="Datos personales" disabled="disabled"/>
-					<input type="button" id="botonConfirmar" value="Confirmar pedido" disabled="disabled"/>
+					<input type="button" id="botonConfirmar" value="Confirmar pedido"/>
 				 </div>
 
 

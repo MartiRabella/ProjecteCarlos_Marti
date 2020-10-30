@@ -167,7 +167,6 @@ document.getElementById("divDatos").className = "divsSi";
 /**/ document.getElementById("divTotal").className = "divsNo";
 } 
 
-
 //FUNCION DE VALIDACION DE DATOS PERSONALES:
 function validaDatosPersonales(elEvento) {
 
@@ -224,12 +223,17 @@ document.getElementById("email2").className = "textMal";
 
 //Si no ha habido ni un solo error, se ejecuta la siguiente funcion que se encarga de mostrar el formulario de los datos personales:
 if (todoBien){
-validaDatosPagoYEnviaCarro();
+    validaDatosPagoYEnviaCarro();
+}else{
+    document.getElementById("botonConfirmar").disabled = true;
 }
-else{
-document.getElementById("botonConfirmar").disabled = true;
 }
-}
+
+function validaDatosPagoYEnviaCarro(elEvento) {
+    document.getElementById("divTotal").className = "divsNo";
+    document.getElementById("divDatos").className = "divsNo";
+    document.getElementById("botonConfirmar").disabled = false;
+    }
 
 //FUNCION DE VALIDAR DATOS PAGO y ENVIAR DATOS
 function validaDatosPagoYEnviaCarro(elEvento) {
