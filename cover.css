@@ -98,5 +98,7 @@ body {
 }
 
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: #FFFFFF;
+  background-color: #9B9492;
+  padding: 10px;
 }

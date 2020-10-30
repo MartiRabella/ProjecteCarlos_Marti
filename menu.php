@@ -101,10 +101,10 @@ if (isset($_COOKIE['hechopedido'])) {
 
                 <label>Fecha de nacimiento:</label><br/>
                 <select id="fechaNacimientoDia">
-                  <option value=""> dia </option>
+                  <option value=""> dia </option>
                 </select>
                 <select id="fechaNacimientoMes">
-                  <option value="">      mes</option>
+                  <option value="">      mes</option>
                   <option value="1">Enero</option>
                   <option value="2">Febrero</option>
                   <option value="3">Marzo</option>
@@ -119,7 +119,7 @@ if (isset($_COOKIE['hechopedido'])) {
                   <option value="12">Diciembre</option>
                 </select>
                 <select id="fechaNacimientoAnio">
-                  <option value="">  año </option>
+                  <option value="">  año </option>
                 </select><br/>
               </div>
 
@@ -149,33 +149,33 @@ if (isset($_COOKIE['hechopedido'])) {
               <option value="Ronda">Ronda</option>
               <option value="Travesia">Travesia</option>
               <option value="Urbanizacion">Urbanizacion</option>
-            </select>     
+            </select>     
 
             <label>Nombre via:</label>
             <input type="text" id="viaNombre" value="" size="20" /><br/>
 
             <label>Nº/km:</label>
-            <input type="text" id="viaNumero" value="" size="2" />  
+            <input type="text" id="viaNumero" value="" size="2" />  
 
             <label>Bloque:</label>
-            <input type="text" id="viaBloque" value="" size="2" />         
+            <input type="text" id="viaBloque" value="" size="2" />         
 
             <label>Escalera:</label>
-            <input type="text" id="viaEscalera" value="" size="2" />  
+            <input type="text" id="viaEscalera" value="" size="2" />  
 
             <label>Piso:</label>
             <input type="text" id="viaPiso" value="" size="2" /><br/>
 
 
             <label>Localidad:</label>
-            <input type="text" id="localidad" value="" size="13"/>  
+            <input type="text" id="localidad" value="" size="13"/>  
 
             <label>Codigo Postal:</label>
-            <input type="text" id="codigoPostal" value="" size="5" maxlength="5"/>  
+            <input type="text" id="codigoPostal" value="" size="5" maxlength="5"/>  
 
             <label>Provincia:</label>
             <select id="provincia">
-              <option value="">          provincia</option>
+              <option value="">          provincia</option>
               <option value="15">A coruña</option>
               <option value="1">Álava</option>
               <option value="2">Albacete</option>
@@ -275,11 +275,11 @@ if (isset($_COOKIE['hechopedido'])) {
 
 
             <select id="mesTarjeta">
-              <option value="">  mes </option>
+              <option value="">  mes </option>
             </select>
 
             <select id="anioTarjeta">
-              <option value="">  año </option>
+              <option value="">  año </option>
             </select>
           </div>
         </div>

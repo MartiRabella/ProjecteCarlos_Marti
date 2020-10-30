@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 if(isset($_COOKIE['contador']))
  {
@@ -8,8 +8,6 @@ if(isset($_COOKIE['contador']))
  }
 
  ?>
-=======
->>>>>>> 473c51105865b438fb4c0f1b1c97ae8f855616ee
 <!doctype html>
 <html lang="es">
   <head>
@@ -46,7 +44,7 @@ if(isset($_COOKIE['contador']))
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h2 class="masthead-brand">CANTINA INSTITUT PEDRALBES</h2>
+      <h3 class="masthead-brand">CANTINA PEDRALBES</h3>
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="index.php">Inicio</a>
         <a class="nav-link" href="menu.php">Menus</a>
