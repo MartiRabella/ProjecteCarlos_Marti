@@ -7,7 +7,6 @@ if(isset($_COOKIE['contador']))
  }
 
  ?>
-<!--HOLA-->
 <!doctype html>
 <html lang="es">
   <head>
