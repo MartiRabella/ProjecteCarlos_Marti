@@ -46,7 +46,7 @@ if(isset($_COOKIE['contador']))
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">CANTINA PEDRALBES</h3>
+      <h2 class="masthead-brand">CANTINA INSTITUT PEDRALBES</h2>
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link active" href="index.php">Inicio</a>
         <a class="nav-link" href="menu.php">Menus</a>
