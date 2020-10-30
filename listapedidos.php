@@ -44,7 +44,7 @@
 
   <main role="main" class="inner cover">
 
-    <h1>Todas los pedidos:</h1>
+    <h1>Todos los pedidos:</h1>
 
     <?php
 
