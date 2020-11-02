@@ -1,5 +1,9 @@
  //BASE DE DATOS
+<<<<<<< HEAD
 var productos = ["Bocadillo Jamon", "Bocadillo Queso", "Bocadillo Chorizo", "Bricoli con patatas", "Macarrones Boloñesa", "Patatas con Huevos", "Flan de Huevo", "Arroz con Leche", "Fruta de Temporada"];
+=======
+var productos = ["Bocata", "Tortilla", "Bebida", "Tapas", "Frankfurt", "cafe", "bocata queso", "verdura", "Panini"];
+>>>>>>> 0848c45dea360ffb57124e5d4d8452927a54f0f3
 var imgGrandes = ["img/productos/1.jpg", "img/productos/2.jpg", "img/productos/3.jpg", "img/productos/4.jpg", "img/productos/5.jpg", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
 var imgPeque = ["img/productos/1m.jpg", "img/productos/2m.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
 var precios = [3, 2, 2, 5, 4, 5, 3, 2, 1];
@@ -7,6 +11,7 @@ var stock = [5, 5, 5, 5, 5, 5, 5, 5, 5];
 var precioTransporte = ["gratis", "gratis", "gratis", "gratis"];
 var IVA = 0.10;
 var uniUser;
+
 
 //JAVASCRIPT A EJECUTARSE UNA VEZ CARGADA LA PAGINA: 
 window.onload = function(){
