@@ -42,24 +42,23 @@ body {
  div.divsSi {display:yes;}
  
  #todo{
- position:relative;
- top:0px;
- margin-left:auto;
- margin-right:auto;
- display:block;
- width:1000px;
- background: #333;
+    top:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    left: 200px;
+    background: #333;
+
 }
  div.todoNo{height:805px;}
  div.todoSi{height:1070px;}
  
  
  #menu{
- position:absolute;
- top:26px;
- left:143px;
- width:715px;
+     top: 50px;
+    left: 1000px;
 }
+
  div.menuNo{height:775px;}
  div.menuSi{height:1040px;}
  
@@ -142,18 +141,17 @@ body {
  /*Div para los botones*/
  
  #divbotones{
- position:relative;
- top:742px;
- left: 100px;
+position: relative;
+ top:200px;
+ left: 400px;
  width:440px;
- height:23px;
  }
  
  #tablaTotal {
  margin: 0px 0px 0px 0px;
  }
  td.pro {
- width:300px;
+ width:00px;
  text-align:center;
  background: #333;
  }
@@ -179,10 +177,11 @@ body {
  /*Divs para la zona de compras*/
  div.divZonaCompraSi{
  position:relative;
- top:742px;
- padding:0px 11px 20px 11px;
+ top:200px;
+ padding:0px 10px 10px 10px;
  display:yes;
- width:693px;
+ left: 400px;
+ width:600px;
  height:auto;
  
  background:#333;
@@ -210,8 +209,7 @@ body {
  position:relative;
  left:0px;
  padding:0px 0px 0px 10px;
- width:440px;
- height:140px;
+ width:300px;
  }
  
  #divDatosPersonales1 {
