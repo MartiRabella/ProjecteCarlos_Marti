@@ -49,70 +49,66 @@ if (isset($_COOKIE['hechopedido'])) {
       <h3 class="masthead-brand">CANTINA PEDRALBES</h3>
       <nav class="nav nav-masthead justify-content-center">
         <a class="nav-link" href="index.php">Inicio</a>
-        <a class="nav-link" href="menu.php">Menus</a>
-        <a class="nav-link active" href="admin.php">Administrador</a>
+        <a class="nav-link active" href="menu.php">Menus</a>
+        <a class="nav-link " href="admin.php">Administrador</a>
       </nav>
     </div>
   </header>
 
   <div id="todo" class="todoNo">
 			<div id="menu" class="menuNo">
+					<!--Producto del 1 al 9-->
+					<div id="div1" name="DIVS"></div>
+					<div id="div2" name="DIVS"></div>
+					<div id="div3" name="DIVS"></div>
+					<div id="div4" name="DIVS"></div>
+					<div id="div5" name="DIVS"></div>
+					<div id="div6" name="DIVS"></div>
+					<div id="div7" name="DIVS"></div>
+					<div id="div8" name="DIVS"></div>
+					<div id="div9" name="DIVS"></div>
 
-
-				<!--Producto del 1 al 9-->
-				<div id="div1" name="DIVS"></div>
-				<div id="div2" name="DIVS"></div>
-				<div id="div3" name="DIVS"></div>
-				<div id="div4" name="DIVS"></div>
-				<div id="div5" name="DIVS"></div>
-				<div id="div6" name="DIVS"></div>
-				<div id="div7" name="DIVS"></div>
-				<div id="div8" name="DIVS"></div>
-				<div id="div9" name="DIVS"></div>
-
-
-				<!--Botones de compra-->
-				<div id="divbotones">
-					<input type="button" id="botonTotal" value="Calcular total"/>
-					<input type="button" id="botonDatos" value="Datos personales" disabled="disabled"/>
-					<input type="button" id="botonConfirmar" value="Confirmar pedido"/>
-				 </div>
-
-
-				<!--zona de compra, tablas, formularios, etc.-->
-				<div id="divZonaCompra" class="divZonaCompraNo">
-
-
-					<!--Carrito de la compra-->
-					<div id="divTotal" class="divsNo">
-						<p><b>Carrito de la compra, si quiere hacer alguna modificacion aun esta a tiempo:</b></p>
-						<table id="tablaTotal"></table>
+				
+	  				<!--Botones de compra-->
+					<div id="divbotones">
+						<input type="button" id="botonTotal" value="Calcular total"/>
+						<input type="button" id="botonDatos" value="Datos personales" disabled="disabled"/>
+						<input type="button" id="botonConfirmar" value="Confirmar pedido"/>
 					</div>
 
 
-					<!--Datos personales-->
-					<div id="divDatos" class="divsNo">
-						<p><b>Introduzca sus datos personales:</b></p>
+					<!--zona de compra, tablas, formularios, etc.-->
+					<div id="divZonaCompra" class="divZonaCompraNo">
 
-							<div id="divDatosPersonales0">
-								<div id="divDatosPersonales1">
-									<label>Nombre completo:</label><br/>
-									<input type="text" id="nombre" value="" size="26" /><br/>
 
+						<!--Carrito de la compra-->
+						<div id="divTotal" class="divsNo">
+							<p><b>Carrito de la compra, si quiere hacer alguna modificacion aun esta a tiempo:</b></p>
+							<table id="tablaTotal"></table>
+						</div>
+
+						<!--Datos personales-->
+						<div id="divDatos" class="divsNo">
+							<p><b>Introduzca sus datos personales:</b></p>
+
+								<div id="divDatosPersonales0">
+									<div id="divDatosPersonales1">
+										<label>Nombre completo:</label><br/>
+										<input type="text" id="nombre" value="" size="26" /><br/>
+									</div>
+									<div id="divDatosPersonales2">
+										<label>Telefono movil:</label><br/>
+										<input type="text" id="movil" value="" size="8" maxlength="9"/><br/>
+
+										<label>Email:</label><br/>
+										<input type="text" id="email1" value="" size="25" /><br/>
+
+										<label>Repita el email:</label><br/>
+										<input type="text" id="email2" value="" size="25" />
+									</div>
 								</div>
-								<div id="divDatosPersonales2">
-									<label>Telefono movil:</label><br/>
-									<input type="text" id="movil" value="" size="8" maxlength="9"/><br/>
-
-									<label>Email:</label><br/>
-									<input type="text" id="email1" value="" size="25" /><br/>
-
-									<label>Repita el email:</label><br/>
-									<input type="text" id="email2" value="" size="25" />
-								</div>
-							</div>
+						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 

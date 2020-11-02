@@ -1,5 +1,8 @@
-/*Fichero de estilos para pantallas de ordenador*/
- body {background: #000;color:white;font-size:14px;font-family:comic sans ms;}
+body {
+    background: white;
+    color:white;
+    font-size:14px;
+    font-family:comic sans ms;}
  
 * {
  margin: 0px;
@@ -15,7 +18,7 @@
  }
  
  div.etiquetas {
- color:black;
+ color: white;
  text-align:center;
  width:222px;
  height:22px;
@@ -45,7 +48,7 @@
  margin-right:auto;
  display:block;
  width:1000px;
- background: #000 url("../img/otros/plantilla.jpg") no-repeat;
+ background: #333;
 }
  div.todoNo{height:805px;}
  div.todoSi{height:1070px;}
@@ -137,10 +140,11 @@
  
 /*CSS DEL CARRITO DE LA COMPRA*/
  /*Div para los botones*/
+ 
  #divbotones{
  position:relative;
  top:742px;
- left:11px;
+ left: 100px;
  width:440px;
  height:23px;
  }
@@ -151,22 +155,22 @@
  td.pro {
  width:300px;
  text-align:center;
- background:#1a6c68;
+ background: #333;
  }
  td.uni {
  width:150px;
  text-align:center;
- background:#1a6c68;
+ background:#333;
  }
  td.preUni {
  width:150px;
  text-align:center;
- background:#1a6c68;
+ background:#333;
  }
  td.preTotal {
  width:150px;
  text-align:center;
- background:#1a6c68;
+ background:#333;
  }
  tr.proCarrito {
  text-align:center;
@@ -181,7 +185,7 @@
  width:693px;
  height:auto;
  
- background:#3c8c89;
+ background:#333;
  }
  div.divZonaCompraNo{
  position:relative;
@@ -191,23 +195,17 @@
  width:693px;
  height:385px;
  
- background:#3c8c89;
+ background:#333;
  }
  
  /*Divs del carrito y formularios*/
  #divTotal{
- background:#378582;
+ background:#333;
  }
  #divDatos{
- background:#378582;
+ background:#333;
  }
- 
- #divPago{
- height: 150px;
- padding-left:10px;
- background:#378582;
- }
- 
+  
  #divDatosPersonales0 {
  position:relative;
  left:0px;
@@ -229,14 +227,7 @@
  width:200px;
  height:130px;
  }
- 
- #divDomicilio{
- padding:0px 0px 0px 10px;
- }
- 
- 
- 
- 
+  
  
 /*CSS VALIDACION*/ 
  input.textBien {background:#d1fbe1;}
@@ -244,36 +235,8 @@
  select.textBien {background:#d1fbe1;}
  select.textMal {background:pink;} 
  span.alertTipoDeTarjeta {color:red;}
- 
- 
- 
-/*Metodos de pago*/ 
-#metodosDePago{
- position:relative;
- top:8px;
- width:128px;
- height:60px;
-}
- 
-#divNumeroTarjeta{
- position:relative;
- top:-52px;
- left:140px;
- width:180px;
- height:70px;
-}
- 
-input.logoTarjetas { 
- bottom:6px;
- position: relative;
-} 
- 
- 
- 
-/*Pie de pagina	*/
-p.pie {
- text-align:center;
-}
-a:link {
- color:white;
-} 
+
+
+ .columnas{
+     display: flex;
+ }

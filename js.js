@@ -1,10 +1,4 @@
-//	Hacer tienda online de informatica usando: HTML, CSS, JS
-//	En el codigo javascript hay que hacer la base de datos de los productos con un vector por ejemplo...
- 
- 
- 
- 
-//BASE DE DATOS
+ //BASE DE DATOS
 var productos = ["Antivirus", "Grafica", "Disco duro", "Ordenador", "Bolso portatil", "Portatil", "Memoria RAM", "Router Linux", "Sintonizadora TV"];
 var imgGrandes = ["img/productos/1.jpg", "img/productos/2.jpg", "img/productos/3.jpg", "img/productos/4.jpg", "img/productos/5.jpg", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
 var imgPeque = ["img/productos/1m.jpg", "img/productos/2m.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
@@ -16,7 +10,6 @@ var uniUser;
 
 //JAVASCRIPT A EJECUTARSE UNA VEZ CARGADA LA PAGINA: 
 window.onload = function(){
-
 
 //Se cargan los productos dentro del HTML de forna dinamica haciendo uso de los datos de la base de datos, como si de un PHP se tratase:
 var DIVS = document.getElementsByName("DIVS");
@@ -104,7 +97,6 @@ document.getElementById("todo").className = "todoSi";
 document.getElementById("menu").className = "menuSi";
 document.getElementById("divZonaCompra").className = "divZonaCompraSi";
 document.getElementById("divTotal").className = "divsSi";
-/**/ document.getElementById("divDatos").className = "divsNo";
 
 //Habilita el boton de datos personales
 document.getElementById("botonDatos").disabled = false;
@@ -157,9 +149,6 @@ totalAPagar=totalAPagar/100;
 tablaTotal = document.getElementById("tablaTotal").innerHTML;
 document.getElementById("tablaTotal").innerHTML = tablaTotal + '<tr><td> </td> <td></td><td class="preUni"><b>Transporte: </b></td><td class="preTotal"><b>' +totalTransporte+ '</b></td></tr>' + '<tr><td> </td> <td></td><td class="preUni"><b>IVA ('+(IVA*100)+'%): </b></td><td class="preTotal"><b>' +totalIVA+ '</b></td></tr>' + '<tr><td> </td> <td></td><td class="preUni"><b>Total: </b></td><td class="preTotal" id="totalAPagar"><b>' +totalAPagar+ ' €</b></td></tr>';
 } 
-
-
-
 
 //FUNCION DE PEDIR DATOS
 function pideDatos(elEvento) {
@@ -221,11 +210,22 @@ todoBien=false;
 document.getElementById("email2").className = "textMal";
 }
 
+if(todoBien){
+    var nom = document.getElementById("nombre").value;
+    var tel = document.getElementById("movil").value;
+    var mail = document.getElementById("email1").value;
+
+    localStorage.setItem("nombre",nom);
+    localStorage.setItem("movil",tel);
+    localStorage.setItem("email",mail);
+
+    localStorage.getItem("nombre");
+    localStorage.getItem("movil");
+    localStorage.getItem("email1");
+}
 //Si no ha habido ni un solo error, se ejecuta la siguiente funcion que se encarga de mostrar el formulario de los datos personales:
 if (todoBien){
     validaDatosPagoYEnviaCarro();
-}else{
-    document.getElementById("botonConfirmar").disabled = true;
 }
 }
 
@@ -234,9 +234,13 @@ function validaDatosPagoYEnviaCarro(elEvento) {
     document.getElementById("divDatos").className = "divsNo";
     document.getElementById("botonConfirmar").disabled = false;
     }
-
+function setCookie(nom){
+    var d = new Date();
+    document.setCookie = nom + d;
+}
 //FUNCION DE VALIDAR DATOS PAGO y ENVIAR DATOS
 function validaDatosPagoYEnviaCarro(elEvento) {
-alert("Gracias por su compra, en 24 horas recivira su pedido\nAhora sera redirigido a la pagina de inicio.");
-window.location.reload()
+    setCookie();
+    alert("Gracias por su compra, ya se esta preparando\nAhora sera redirigido a la pagina de inicio.");
+    location.href="index.php";
 }
