@@ -1,3 +1,13 @@
+
+<?php
+if(isset($_COOKIE['contador']))
+ {
+   // Caduca en un año
+   setcookie('contador', $_COOKIE['contador'] + 1, time() + 60);
+   $mensaje = 'Número de visitas: ' . $_COOKIE['contador'];
+ }
+
+ ?>
 <!doctype html>
 <html lang="es">
   <head>
