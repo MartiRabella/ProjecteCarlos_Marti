@@ -42,6 +42,14 @@ body {
  div.divsSi {display:yes;}
  
  #todo{
+
+    top:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    left: 200px;
+    background: #333;
+
  display: flex;
  top:500px;
  margin-left:auto;
@@ -57,11 +65,15 @@ body {
  
  
  #menu{
- 
+
+     top: 50px;
+    left: 1000px;
+
  top:26px;
  left:500px;
  width:715px;
 }
+
  div.menuNo{height:775px;}
  div.menuSi{height:1040px;}
  
@@ -144,9 +156,9 @@ body {
  /*Div para los botones*/
  
  #divbotones{
- position:relative;
- top:742px;
- left: 100px;
+position: relative;
+ top:200px;
+ left: 400px;
  width:440px;
  }
  
@@ -180,10 +192,11 @@ body {
  /*Divs para la zona de compras*/
  div.divZonaCompraSi{
  position:relative;
- top:742px;
- padding:0px 11px 20px 11px;
+ top:200px;
+ padding:0px 10px 10px 10px;
  display:yes;
- width:693px;
+ left: 400px;
+ width:600px;
  height:auto;
  
  background:#333;
@@ -211,8 +224,7 @@ body {
  position:relative;
  left:0px;
  padding:0px 0px 0px 10px;
- width:440px;
- height:140px;
+ width:300px;
  }
  
  #divDatosPersonales1 {
