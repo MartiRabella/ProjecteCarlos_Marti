@@ -8,6 +8,7 @@ var precioTransporte = [6, 12, 20, "gratis"];
 var IVA = 0.18;
 var uniUser;
 
+
 //JAVASCRIPT A EJECUTARSE UNA VEZ CARGADA LA PAGINA: 
 window.onload = function(){
 
