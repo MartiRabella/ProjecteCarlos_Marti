@@ -1,6 +1,7 @@
  //BASE DE DATOS
 var productos = ["Bocadillo Jamon", "Bocadillo Queso", "Bocadillo Chorizo", "Brocoli con patatas", "Macarrones Boloñesa", "Patatas con Huevos", "Flan de Huevo", "Arroz con Leche", "Fruta de Temporada"];
-var imgPeque = ["img/bocata.jpg", "img/productos/2m.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
+var imgGrandes = ["img/bocata.jpg", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
+var imgPeque = ["img/bocata.jpg", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
 var precios = [3, 2, 2, 5, 4, 5, 3, 2, 1];
 var stock = [5, 5, 5, 5, 5, 5, 5, 5, 5];
 var precioTransporte = ["gratis", "gratis", "gratis", "gratis"];
@@ -14,7 +15,7 @@ window.onload = function(){
 //Se cargan los productos dentro del HTML de forna dinamica haciendo uso de los datos de la base de datos, como si de un PHP se tratase:
 var DIVS = document.getElementsByName("DIVS");
 for (i in productos){
-DIVS[i].innerHTML = '<a id="imgG'+i+'" href="' +imgGrandes[i]+ '"><img id="imgP'+i+'" class="imagen" src="' +imgPeque[i]+ '"></a><div class="etiquetas"><b><span id="pro'+i+'">' +productos[i]+ '</span>: <span id="pre'+i+'">' +precios[i]+ '€</span></b></div>'+ '</span> unidades,<br/>¿Cuantas quiere?: <input class="uniBien" type="number" id="uniUser'+i+'" name="uniUser" value="0" size="4" /></div>';
+DIVS[i].innerHTML = '<a id="imgG'+i+'" href="' +imgGrandes[i]+ '"><img id="imgP'+i+'" class="imagen" src="' +imgPeque[i]+ '"></a><div class="etiquetas"><b><span id="pro'+i+'">' +productos[i]+ '</span>: <span id="pre'+i+'">' +precios[i]+ '€</span></b></div>' + '</span> unidades,<br/>¿Cuantas quiere?: <input class="uniBien" type="number" id="uniUser'+i+'" name="uniUser" value="0" size="4" /></div>';
 }
 
 //Botones que llevaran a cabo la ejecucion de determinadas secuencias de codigo JavaScript:
