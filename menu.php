@@ -15,8 +15,8 @@ if (isset($_COOKIE['hechopedido'])) {
 
     	
     <script src=”js.js” language=”Javascript”></script>
-		<script type="text/javascript" src="js.js"></script>
-		<link type="text/css" href="csssueldo.css" rel="stylesheet" media="screen"/>
+	<script type="text/javascript" src="js.js"></script>
+	<link type="text/css" href="csssueldo.css" rel="stylesheet" media="screen"/>
 
     <link rel="shortcut icon" type="image/x-icon" href="icono.ico" />
     <title>CANTINA PEDRALBES</title>
