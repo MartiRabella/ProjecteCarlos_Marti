@@ -109,7 +109,7 @@ if (isset($_COOKIE['hechopedido'])) {
 									</div>
 								</div>
 						</div>
-					</div>
+					</div> 
 				</div>
 			</div>
 		</div>
