@@ -2,7 +2,7 @@
  Repositorio creado para subir todos los archivos del proyecto transversual
 
 
-URL: labs.iam.cat
+URL: http://labs.iam.cat/~a19marrabpar/projecteCarlos_Marti/index.php
 
 
 
