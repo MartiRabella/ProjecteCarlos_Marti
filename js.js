@@ -1,9 +1,5 @@
  //BASE DE DATOS
-<<<<<<< HEAD
 var productos = ["Bocadillo Jamon", "Bocadillo Queso", "Bocadillo Chorizo", "Bricoli con patatas", "Macarrones Boloñesa", "Patatas con Huevos", "Flan de Huevo", "Arroz con Leche", "Fruta de Temporada"];
-=======
-var productos = ["Bocata", "Tortilla", "Bebida", "Tapas", "Frankfurt", "cafe", "bocata queso", "verdura", "Panini"];
->>>>>>> 0848c45dea360ffb57124e5d4d8452927a54f0f3
 var imgGrandes = ["img/productos/1.jpg", "img/productos/2.jpg", "img/productos/3.jpg", "img/productos/4.jpg", "img/productos/5.jpg", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
 var imgPeque = ["img/productos/1m.jpg", "img/productos/2m.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
 var precios = [3, 2, 2, 5, 4, 5, 3, 2, 1];
@@ -217,14 +213,17 @@ if(todoBien){
     var nom = document.getElementById("nombre").value;
     var tel = document.getElementById("movil").value;
     var mail = document.getElementById("email1").value;
+    var pedido = document.getElementById("tablaTotal").value
 
     localStorage.setItem("nombre",nom);
     localStorage.setItem("movil",tel);
     localStorage.setItem("email",mail);
+    localStorage.setItem("pedido",JSON.stringify(pedido));
 
     localStorage.getItem("nombre");
     localStorage.getItem("movil");
     localStorage.getItem("email1");
+    localStorage.getItem("pedido");
 }
 //Si no ha habido ni un solo error, se ejecuta la siguiente funcion que se encarga de mostrar el formulario de los datos personales:
 if (todoBien){
@@ -241,9 +240,10 @@ function setCookie(nom){
     var d = new Date();
     document.setCookie = nom + d;
 }
+
 //FUNCION DE VALIDAR DATOS PAGO y ENVIAR DATOS
 function validaDatosPagoYEnviaCarro(elEvento) {
     setCookie();
     alert("Gracias por su compra, ya se esta preparando\nAhora sera redirigido a la pagina de inicio.");
-    location.href="index.php";
+    location.href="almacenar.php";
 }

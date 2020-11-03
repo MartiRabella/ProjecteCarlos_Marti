@@ -42,7 +42,6 @@ body {
  div.divsSi {display:yes;}
  
  #todo{
-
     top:1000px;
     margin-left:auto;
     margin-right:auto;
@@ -50,38 +49,23 @@ body {
     left: 200px;
     background: #333;
 
- display: flex;
- top:500px;
- margin-left:auto;
- margin-right:auto;
- width:100px;
- background: #333;
-
- position:relative;
-
 }
  div.todoNo{height:805px;}
  div.todoSi{height:1070px;}
  
- 
+ /*
  #menu{
 
-     top: 50px;
-    left: 1000px;
-
- top:26px;
- left:500px;
- width:715px;
 }
-
+*/
  div.menuNo{height:775px;}
  div.menuSi{height:1040px;}
  
-
+/*Divs para colocar cada producto en su sitio*/
  #div1{
  position:absolute;
  top:38px;
- left:100px;
+ left:12px;
  width:221px;
  height:217px;
  }
@@ -203,10 +187,10 @@ position: relative;
  }
  div.divZonaCompraNo{
  position:relative;
- top:740px;
+ top:742px;
  padding:0px 11px 20px 11px;
  display:none;
- width:700px;
+ width:693px;
  height:385px;
  
  background:#333;

@@ -7,6 +7,8 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="icono.ico" />
     <title>CANTINA PEDRALBES</title>
+    <script type="text/javascript" src="pedidos.js"></script>
+    <script src=”pedidos.js” language=”Javascript”></script>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/admin">
 
