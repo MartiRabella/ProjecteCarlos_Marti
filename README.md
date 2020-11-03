@@ -2,7 +2,7 @@
  Repositorio creado para subir todos los archivos del proyecto transversual
 
 
-URL: 192.168.219.137/cover/
+URL: labs.iam.cat
 
 
 
