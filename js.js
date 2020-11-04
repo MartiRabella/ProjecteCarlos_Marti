@@ -1,7 +1,7 @@
  //BASE DE DATOS
 var productos = ["Bocadillo Jamon", "Bocadillo Queso", "Bocadillo Chorizo", "Brocoli con patatas", "Macarrones Boloñesa", "Patatas con Huevos", "Flan de Huevo", "Arroz con Leche", "Fruta de Temporada"];
-var imgGrandes = ["img/bocata.jpg", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
-var imgPeque = ["img/bocata.jpg", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
+var imgGrandes = ["img/jamon.png", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/patatas.png", "img/flan.png", "img/arroz.png", "img/fruta.png"];
+var imgPeque = ["img/jamon.png", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/patatas.png", "img/flan.png", "img/arroz.png", "img/fruta.png"];
 var precios = [3, 2, 2, 5, 4, 5, 3, 2, 1];
 var stock = [5, 5, 5, 5, 5, 5, 5, 5, 5];
 var precioTransporte = ["gratis", "gratis", "gratis", "gratis"];
@@ -214,6 +214,7 @@ if(todoBien){
     var tel = document.getElementById("movil").value;
     var mail = document.getElementById("email1").value;
     var pedido = document.getElementById("tablaTotal").value
+    console.log ("pedido" + pedido)
 
     localStorage.setItem("nombre",nom);
     localStorage.setItem("movil",tel);
@@ -236,14 +237,9 @@ function validaDatosPagoYEnviaCarro(elEvento) {
     document.getElementById("divDatos").className = "divsNo";
     document.getElementById("botonConfirmar").disabled = false;
     }
-function setCookie(nom){
-    var d = new Date();
-    document.setCookie = nom + d;
-}
 
 //FUNCION DE VALIDAR DATOS PAGO y ENVIAR DATOS
 function validaDatosPagoYEnviaCarro(elEvento) {
-    setCookie();
-    alert("Gracias por su compra, ya se esta preparando\nAhora sera redirigido a la pagina de inicio.");
-    location.href="almacenar.php";
+    alert ("Pedido hecho")
+    //location.href="gracias.php";
 }
