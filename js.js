@@ -15,7 +15,7 @@ window.onload = function(){
 //Se cargan los productos dentro del HTML de forna dinamica haciendo uso de los datos de la base de datos, como si de un PHP se tratase:
 var DIVS = document.getElementsByName("DIVS");
 for (i in productos){
-DIVS[i].innerHTML = '<a id="imgG'+i+'" href="' +imgGrandes[i]+ '"><img id="imgP'+i+'" class="imagen" src="' +imgPeque[i]+ '"></a><div class="etiquetas"><b><span id="pro'+i+'">' +productos[i]+ '</span>: <span id="pre'+i+'">' +precios[i]+ '€</span></b></div>' + '</span> unidades,<br/>¿Cuantas quiere?: <input class="uniBien" type="number" id="uniUser'+i+'" name="uniUser" value="0" size="4" /></div>';
+DIVS[i].innerHTML = '<a id="imgG'+i+'" href="' +imgGrandes[i]+ '"><img id="imgP'+i+'" class="imagen" src="' +imgPeque[i]+ '"></a><div class="etiquetas"><b><span id="pro'+i+'">' +productos[i]+ '</span>: <span id="pre'+i+'">' +precios[i]+ '€</span></b></div>'+ '</span> unidades,<br/>¿Cuantas quiere?: <input class="uniBien" type="number" id="uniUser'+i+'" name="uniUser" value="0" size="4" /></div>';
 }
 
 //Botones que llevaran a cabo la ejecucion de determinadas secuencias de codigo JavaScript:
@@ -214,12 +214,15 @@ if(todoBien){
     var tel = document.getElementById("movil").value;
     var mail = document.getElementById("email1").value;
     var pedido = document.getElementById("tablaTotal").value
-    console.log ("pedido" + pedido)
 
     localStorage.setItem("nombre",nom);
     localStorage.setItem("movil",tel);
     localStorage.setItem("email",mail);
-    localStorage.setItem("pedido",JSON.stringify(pedido));
+    for(i in productos){
+        if (uniUser[i].value != 0){
+            localStorage.setItem("pedido",uniUser[i].value + "-"+ productos[i]);
+        }
+    }
 
     localStorage.getItem("nombre");
     localStorage.getItem("movil");
@@ -240,6 +243,5 @@ function validaDatosPagoYEnviaCarro(elEvento) {
 
 //FUNCION DE VALIDAR DATOS PAGO y ENVIAR DATOS
 function validaDatosPagoYEnviaCarro(elEvento) {
-    alert ("Pedido hecho")
-    //location.href="gracias.php";
+    location.href="gracias.php";
 }
