@@ -57,7 +57,6 @@ if (isset($_COOKIE['hechopedido'])) {
 
   <div id="todo" class="todoNo">
 			<div id="menu" class="menuNo">
-	  			<div>
 				  	<!--Producto del 1 al 9-->
 					<div id="div1" name="DIVS"></div>
 					<div id="div2" name="DIVS"></div>
@@ -68,13 +67,17 @@ if (isset($_COOKIE['hechopedido'])) {
 					<div id="div7" name="DIVS"></div>
 					<div id="div8" name="DIVS"></div>
 					<div id="div9" name="DIVS"></div>
-				</div>
-				<div>
 					<!--Botones de compra-->
 					<div id="divbotones">
 						<input type="button" id="botonTotal" value="Calcular total"/>
 						<input type="button" id="botonDatos" value="Datos personales" disabled="disabled"/>
-						<input type="button" id="botonConfirmar" value="Confirmar pedido"/>
+						<form action="gracias.php" method="POST" id="myForm">
+							<input type="button" id="botonConfirmar" value="Confirmar pedido"/>
+							<input type="hidden" name="Nombre" id="Nombre" value="Nombre"/>
+							<input type="hidden" name="Email" id="Email" value="Email"/>
+							<input type="hidden" name="Telf" id="Telf" value="Telf">
+							<input type="hidden" name="pedido" id="pedido" value="pedido">
+						</form>
 					</div>
 
 
@@ -110,11 +113,8 @@ if (isset($_COOKIE['hechopedido'])) {
 								</div>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
-
-
   <?php include("footer.php") ?>
 </div>
 </body>

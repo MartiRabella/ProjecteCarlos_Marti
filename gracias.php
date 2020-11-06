@@ -2,12 +2,23 @@
 
   setcookie('hechopedido', "valorcookies",time() + 24*60*60);
 
+  $nombre = $_POST['Nombre'] ;
+  $email = $_POST['Email'];
+  $movil = $_POST['Telf'];
+  $pedido = $_POST['pedido'];
+
+  $todo = $nombre . "<br>". $email . "<br>" . $movil . "<br>" . $pedido . "<br>" . "<br>";
+
+  $fp = fopen("pedidos.txt", "a") or die ("Error al crear el txt");
+  fwrite($fp, $todo);
+  fclose($fp);
+
  ?>
 
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
@@ -16,7 +27,6 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {

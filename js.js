@@ -1,7 +1,7 @@
  //BASE DE DATOS
 var productos = ["Bocadillo Jamon", "Bocadillo Queso", "Bocadillo Chorizo", "Bricoli con patatas", "Macarrones Boloñesa", "Patatas con Huevos", "Flan de Huevo", "Arroz con Leche", "Fruta de Temporada"];
-var imgGrandes = ["img/productos/1.jpg", "img/productos/2.jpg", "img/productos/3.jpg", "img/productos/4.jpg", "img/productos/5.jpg", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
-var imgPeque = ["img/productos/1m.jpg", "img/productos/2m.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
+var imgGrandes = ["img/jamonq.jpg", "img/lomoq.jpg", "img/productos/3.jpg", "img/productos/4.jpg", "img/productos/5.jpg", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
+var imgPeque = ["img/jamonq.jpg", "img/lomoq.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
 var precios = [3, 2, 2, 5, 4, 5, 3, 2, 1];
 var stock = [5, 5, 5, 5, 5, 5, 5, 5, 5];
 var precioTransporte = ["gratis", "gratis", "gratis", "gratis"];
@@ -210,15 +210,21 @@ document.getElementById("email2").className = "textMal";
 }
 
 if(todoBien){
+    for (i in productos){
+        if (uniUser[i].value != 0){
+        var pedidos = new Array(productos[i])
+        pedidos[i] = productos[i];
+         }
+    }
+
     var nom = document.getElementById("nombre").value;
     var tel = document.getElementById("movil").value;
     var mail = document.getElementById("email1").value;
-    var pedido = document.getElementById("tablaTotal").value
 
     localStorage.setItem("nombre",nom);
     localStorage.setItem("movil",tel);
     localStorage.setItem("email",mail);
-    localStorage.setItem("pedido",JSON.stringify(pedido));
+    localStorage.setItem("pedido",pedidos);
 
     localStorage.getItem("nombre");
     localStorage.getItem("movil");
@@ -236,14 +242,13 @@ function validaDatosPagoYEnviaCarro(elEvento) {
     document.getElementById("divDatos").className = "divsNo";
     document.getElementById("botonConfirmar").disabled = false;
     }
-function setCookie(nom){
-    var d = new Date();
-    document.setCookie = nom + d;
-}
 
 //FUNCION DE VALIDAR DATOS PAGO y ENVIAR DATOS
 function validaDatosPagoYEnviaCarro(elEvento) {
-    setCookie();
-    alert("Gracias por su compra, ya se esta preparando\nAhora sera redirigido a la pagina de inicio.");
-    location.href="almacenar.php";
+    document.getElementById("Nombre").value = localStorage.getItem("nombre");
+    document.getElementById("Email").value = localStorage.getItem("email");
+    document.getElementById("Telf").value = localStorage.getItem("movil");
+    document.getElementById("pedido").value = localStorage.getItem("pedido");
+
+    document.getElementById("myForm").submit();
 }
