@@ -9,7 +9,7 @@
 
   $todo = $nombre . "<br>". $email . "<br>" . $movil . "<br>" . $pedido . "<br>" . "<br>";
 
-  $fp = fopen("pedidos.txt", "a") or die ("Error al crear el txt");
+  $fp = fopen("pedidos.txt", "w") or die ("Error al crear el txt");
   fwrite($fp, $todo);
   fclose($fp);
 
