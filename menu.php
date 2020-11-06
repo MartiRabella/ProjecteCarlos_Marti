@@ -12,16 +12,16 @@ if (isset($_COOKIE['hechopedido'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
     	
     <script src=”js.js” language=”Javascript”></script>
-	<script type="text/javascript" src="js.js"></script>
-	<link type="text/css" href="csssueldo.css" rel="stylesheet" media="screen"/>
+	<script type="text/javascript" src="js/js.js"></script>
+	<link type="text/css" href="css/csssueldo.css" rel="stylesheet" media="screen"/>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
+	<link rel="shortcut icon" type="image/x-icon" href="icono.ico" />
+	<link href="css/cover.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="icono.ico" />
     <title>CANTINA PEDRALBES</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
 
     <style>
       .bd-placeholder-img {
@@ -40,7 +40,6 @@ if (isset($_COOKIE['hechopedido'])) {
       }
 
     </style>
-    <link href="cover.css" rel="stylesheet">
   </head>
   <body class="text-center">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
