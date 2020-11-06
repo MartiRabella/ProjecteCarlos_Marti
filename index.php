@@ -35,7 +35,7 @@ if(isset($_COOKIE['contador']))
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
-      }
+      } 
     </style>
     <link href="cover.css" rel="stylesheet">
   </head>

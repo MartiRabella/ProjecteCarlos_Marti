@@ -1,7 +1,7 @@
  //BASE DE DATOS
-var productos = ["Bocadillo Jamon", "Bocadillo Queso", "Bocadillo Chorizo", "Bricoli con patatas", "Macarrones Boloñesa", "Patatas con Huevos", "Flan de Huevo", "Arroz con Leche", "Fruta de Temporada"];
-var imgGrandes = ["img/jamonq.jpg", "img/lomoq.jpg", "img/productos/3.jpg", "img/productos/4.jpg", "img/productos/5.jpg", "img/productos/6.jpg", "img/productos/7.jpg", "img/productos/8.jpg", "img/productos/9.jpg"];
-var imgPeque = ["img/jamonq.jpg", "img/lomoq.jpg", "img/productos/3m.jpg", "img/productos/4m.jpg", "img/productos/5m.jpg", "img/productos/6m.jpg", "img/productos/7m.jpg", "img/productos/8m.jpg", "img/productos/9m.jpg"];
+var productos = ["Bocadillo Jamon", "Bocadillo Queso", "Bocadillo Chorizo", "Brocoli con patatas", "Macarrones Boloñesa", "Patatas con Huevos", "Flan de Huevo", "Arroz con Leche", "Fruta de Temporada"];
+var imgGrandes = ["img/jamon.png", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/patatas.png", "img/flan.png", "img/arroz.png", "img/fruta.png"];
+var imgPeque = ["img/jamon.png", "img/queso.png", "img/chorizo.png", "img/brocoli.png", "img/macarrones.png", "img/patatas.png", "img/flan.png", "img/arroz.png", "img/fruta.png"];
 var precios = [3, 2, 2, 5, 4, 5, 3, 2, 1];
 var stock = [5, 5, 5, 5, 5, 5, 5, 5, 5];
 var precioTransporte = ["gratis", "gratis", "gratis", "gratis"];
@@ -226,6 +226,7 @@ if(todoBien){
     localStorage.setItem("email",mail);
     localStorage.setItem("pedido",pedidos);
 
+
     localStorage.getItem("nombre");
     localStorage.getItem("movil");
     localStorage.getItem("email1");
@@ -245,6 +246,7 @@ function validaDatosPagoYEnviaCarro(elEvento) {
 
 //FUNCION DE VALIDAR DATOS PAGO y ENVIAR DATOS
 function validaDatosPagoYEnviaCarro(elEvento) {
+
     document.getElementById("Nombre").value = localStorage.getItem("nombre");
     document.getElementById("Email").value = localStorage.getItem("email");
     document.getElementById("Telf").value = localStorage.getItem("movil");
